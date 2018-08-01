@@ -9,6 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <SplitView x:Name="SplitView" IsPaneOpen="False" Background="CornflowerBlue" PaneBackground="LightCoral" PanePlacement="Right" PaneClosing="SplitView_PaneClosing">
+            <SplitView.Pane>
+                <RelativePanel>
+                    <Button Content="Close" Margin="8" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Click="Button_Click"/>
+                </RelativePanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <Button x:Name="BtnOpenPane" Content="Show flyout" Click="BtnOpenPane_Click" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+                    
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
